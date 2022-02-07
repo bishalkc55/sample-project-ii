@@ -11,12 +11,16 @@
 background-size: cover;
 }
 .navbar{
-    width:85%;
+    width:80%;
     margin: auto;
-    padding: 35px 0;
+    padding: 0px 0;
     display: flex;
     align-items: center;
     justify-content:space-between;
+}
+.navbar img{
+    width: 10%;
+    
 }
 .navbar ul li{
     list-style: none;
@@ -26,6 +30,10 @@ background-size: cover;
 
     
 
+}
+.navbar ul{
+    float: right;
+    
 }
 .navbar ul li a{
     text-decoration: none;
@@ -68,35 +76,35 @@ background-size: cover;
     line-height: 25px;
 
 }
-.button{
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20 px 10 px;
-    border-radius: 25px;
+button{
+    width: 150px;
+    padding: 10px 0 ;
+    margin: 0 20px;
+    border: 2px solid rgb(235, 22, 57);
+    border-radius: 20px;
+    font-size: medium;
     font-weight: bold;
-    border: 2px solid white;
     background: transparent;
     color: white;
-    cursor: pointer;
-
+    position: relative;
 }
-.span{
-    background: burlywood;
+button::after{
+    content: '';
+    width: 0%;
     height: 100%;
-width: 100%;
-border-radius: 25px;
-position: absolute;
-left: 0;
-bottom: 0;
- z-index: -1;
- transition: 0.5s;
-
+    background-color: rgb(235, 22, 57);
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px;
 }
-.button:hover span{
+button:hover::after{
     width: 100%;
+    transition: 0.25s;
+}
+button:hover{
+    border: none;
 
 }
-.button:hover{
-    border: none;
-}
+
